@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "POS & Management System for Julie's Bakery",
+    "repo_name": "POS-and-Management-System-For-Julie-s-Bakery",
+    "description": "Full-featured bakery point of sale and back-office management system with inventory tracking, shift management, receipts, and real-time sales reporting.",
+    "primary_language": "PHP",
+    "topics": ["pos-system", "inventory-management", "php", "mysql", "sales-reporting", "portfolio-featured"],
+    "stargazers_count": 1,
+    "forks_count": 2,
+    "html_url": "https://github.com/Nil-Al/POS-and-Management-System-For-Julie-s-Bakery",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Clinical Clustering & Machine Learning",
+    "repo_name": "Clustering_Assignment_2",
+    "description": "Comparative machine learning analysis evaluating K-Means and DBSCAN clustering algorithms on medical events datasets to uncover hidden clinical patterns.",
+    "primary_language": "Jupyter Notebook",
+    "topics": ["machine-learning", "k-means", "dbscan", "data-science", "clustering", "portfolio-featured"],
+    "stargazers_count": 0,
+    "forks_count": 0,
+    "html_url": "https://github.com/Nil-Al/Clustering_Assignment_2",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "Statistical Time-to-Event (TTE) Modeling",
+    "repo_name": "R-to-Python",
+    "description": "Statistical modeling and survival analytics engine migrating complex R time-to-event workflows into performant Python Jupyter notebooks.",
+    "primary_language": "Jupyter Notebook",
+    "topics": ["statistical-modeling", "survival-analysis", "python", "r-migration", "time-to-event", "portfolio-featured"],
+    "stargazers_count": 0,
+    "forks_count": 0,
+    "html_url": "https://github.com/Nil-Al/R-to-Python",
+    "featured": true
+  },
+  {
+    "id": 4,
+    "title": "Exploratory Data Analytics Lab",
+    "repo_name": "Data-Analytics",
+    "description": "A comprehensive data analysis workspace focusing on data cleaning, exploratory data analysis (EDA), and descriptive visual storytelling.",
+    "primary_language": "Jupyter Notebook",
+    "topics": ["data-analytics", "data-visualization", "jupyter-notebook", "python"],
+    "stargazers_count": 0,
+    "forks_count": 0,
+    "html_url": "https://github.com/Nil-Al/Data-Analytics",
+    "featured": false
+  },
+  {
+    "id": 5,
+    "title": "System Analysis & Flow Prototype",
+    "repo_name": "system-analysis-6-23-24",
+    "description": "System architecture and workflow optimization study exploring component structures and interactive system process flows.",
+    "primary_language": "JavaScript",
+    "topics": ["system-analysis", "javascript", "web-architecture", "workflow-design"],
+    "stargazers_count": 0,
+    "forks_count": 0,
+    "html_url": "https://github.com/Nil-Al/system-analysis-6-23-24",
+    "featured": false
+  }
+]
