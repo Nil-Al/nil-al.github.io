@@ -9,4 +9,6 @@ export interface Project {
   forks_count: number;
   html_url: string;
   featured: boolean;
+  image_url?: string;
+  live_url?: string;
 }

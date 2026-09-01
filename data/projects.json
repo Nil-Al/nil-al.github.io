@@ -9,7 +9,9 @@
     "stargazers_count": 1,
     "forks_count": 2,
     "html_url": "https://github.com/Nil-Al/POS-and-Management-System-For-Julie-s-Bakery",
-    "featured": true
+    "featured": true,
+    "image_url": "https://picsum.photos/seed/bakery/800/450",
+    "live_url": "#"
   },
   {
     "id": 2,
@@ -21,7 +23,8 @@
     "stargazers_count": 0,
     "forks_count": 0,
     "html_url": "https://github.com/Nil-Al/Clustering_Assignment_2",
-    "featured": true
+    "featured": true,
+    "image_url": "https://picsum.photos/seed/clustering/800/450"
   },
   {
     "id": 3,
@@ -33,7 +36,8 @@
     "stargazers_count": 0,
     "forks_count": 0,
     "html_url": "https://github.com/Nil-Al/R-to-Python",
-    "featured": true
+    "featured": true,
+    "image_url": "https://picsum.photos/seed/statistics/800/450"
   },
   {
     "id": 4,
@@ -45,7 +49,8 @@
     "stargazers_count": 0,
     "forks_count": 0,
     "html_url": "https://github.com/Nil-Al/Data-Analytics",
-    "featured": false
+    "featured": false,
+    "image_url": "https://picsum.photos/seed/analytics/800/450"
   },
   {
     "id": 5,
@@ -57,6 +62,8 @@
     "stargazers_count": 0,
     "forks_count": 0,
     "html_url": "https://github.com/Nil-Al/system-analysis-6-23-24",
-    "featured": false
+    "featured": false,
+    "image_url": "https://picsum.photos/seed/sysanalysis/800/450",
+    "live_url": "#"
   }
 ]
