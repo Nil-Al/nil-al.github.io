@@ -23,18 +23,16 @@ export default function HeroSection() {
 
         {/* Headline */}
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-zinc-50 leading-[1.1]">
-          Lorem ipsum dolor
+          Building Smart, Responsive
           <br className="hidden sm:inline" />
           <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
-            sit amet consectetur.
+            Digital Solutions.
           </span>
         </h1>
 
         {/* Bio paragraph */}
         <p className="mt-6 sm:mt-8 text-base sm:text-lg lg:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-          doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore
-          veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          I am a versatile software developer specializing in full-stack web development and robust database architecture. Driven by a continuous learning mindset, I thrive on exploring emerging technologies—from engineering seamless, data-driven web applications to designing interactive game experiences.
         </p>
 
         {/* CTA Button */}
