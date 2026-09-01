@@ -96,8 +96,8 @@ export default function TechStackSection() {
           Tech Stack
         </h2>
         <p className="mt-3 max-w-2xl mx-auto text-base sm:text-lg text-zinc-400">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. These are the
-          technologies I work with daily.
+          These are the
+          technologies I have worked with.
         </p>
       </div>
 

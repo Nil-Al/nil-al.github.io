@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "POS & Management System for Julie's Bakery",
+    "title": "POS & Management System for Julie's Bakeshop",
     "repo_name": "POS-and-Management-System-For-Julie-s-Bakery",
     "description": "Full-featured bakery point of sale and back-office management system with inventory tracking, shift management, receipts, and real-time sales reporting.",
     "primary_language": "PHP",
@@ -9,61 +9,32 @@
     "stargazers_count": 1,
     "forks_count": 2,
     "html_url": "https://github.com/Nil-Al/POS-and-Management-System-For-Julie-s-Bakery",
-    "featured": true,
-    "image_url": "https://picsum.photos/seed/bakery/800/450",
-    "live_url": "#"
+    "featured": true
   },
   {
     "id": 2,
-    "title": "Clinical Clustering & Machine Learning",
-    "repo_name": "Clustering_Assignment_2",
-    "description": "Comparative machine learning analysis evaluating K-Means and DBSCAN clustering algorithms on medical events datasets to uncover hidden clinical patterns.",
-    "primary_language": "Jupyter Notebook",
-    "topics": ["machine-learning", "k-means", "dbscan", "data-science", "clustering", "portfolio-featured"],
+    "title": "MindVault",
+    "repo_name": "mindvault",
+    "description": "A secure and intuitive Android application designed for personal knowledge management, structured note-taking, and secure offline-first storage.",
+    "primary_language": "Kotlin",
+    "topics": ["android", "mobile-app", "kotlin", "offline-first", "security", "portfolio-featured"],
     "stargazers_count": 0,
     "forks_count": 0,
-    "html_url": "https://github.com/Nil-Al/Clustering_Assignment_2",
-    "featured": true,
-    "image_url": "https://picsum.photos/seed/clustering/800/450"
+    "html_url": "https://github.com/Alias314/mindvault",
+    "featured": true
   },
   {
     "id": 3,
-    "title": "Statistical Time-to-Event (TTE) Modeling",
-    "repo_name": "R-to-Python",
-    "description": "Statistical modeling and survival analytics engine migrating complex R time-to-event workflows into performant Python Jupyter notebooks.",
-    "primary_language": "Jupyter Notebook",
-    "topics": ["statistical-modeling", "survival-analysis", "python", "r-migration", "time-to-event", "portfolio-featured"],
+    "title": "Explain My Bills!",
+    "repo_name": "explain-my-bills",
+    "description": "An interactive web platform that simplifies and breaks down complex utility and service bills into clear, understandable insights and visual breakdowns.",
+    "primary_language": "TypeScript",
+    "topics": ["nextjs", "react", "typescript", "financial-tech", "bill-analysis", "portfolio-featured"],
     "stargazers_count": 0,
     "forks_count": 0,
-    "html_url": "https://github.com/Nil-Al/R-to-Python",
+    "html_url": "https://github.com/ShawnMayol/explain-my-bills",
     "featured": true,
-    "image_url": "https://picsum.photos/seed/statistics/800/450"
-  },
-  {
-    "id": 4,
-    "title": "Exploratory Data Analytics Lab",
-    "repo_name": "Data-Analytics",
-    "description": "A comprehensive data analysis workspace focusing on data cleaning, exploratory data analysis (EDA), and descriptive visual storytelling.",
-    "primary_language": "Jupyter Notebook",
-    "topics": ["data-analytics", "data-visualization", "jupyter-notebook", "python"],
-    "stargazers_count": 0,
-    "forks_count": 0,
-    "html_url": "https://github.com/Nil-Al/Data-Analytics",
-    "featured": false,
-    "image_url": "https://picsum.photos/seed/analytics/800/450"
-  },
-  {
-    "id": 5,
-    "title": "System Analysis & Flow Prototype",
-    "repo_name": "system-analysis-6-23-24",
-    "description": "System architecture and workflow optimization study exploring component structures and interactive system process flows.",
-    "primary_language": "JavaScript",
-    "topics": ["system-analysis", "javascript", "web-architecture", "workflow-design"],
-    "stargazers_count": 0,
-    "forks_count": 0,
-    "html_url": "https://github.com/Nil-Al/system-analysis-6-23-24",
-    "featured": false,
-    "image_url": "https://picsum.photos/seed/sysanalysis/800/450",
-    "live_url": "#"
+    "image_url": "https://picsum.photos/seed/explainmybills/800/450",
+    "live_url": "https://explain-my-bills.vercel.app"
   }
 ]

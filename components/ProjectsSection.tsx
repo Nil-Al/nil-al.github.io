@@ -38,12 +38,27 @@ const LANGUAGE_COLORS: Record<string, { bg: string; text: string; dot: string }>
     text: "text-cyan-700 dark:text-cyan-300",
     dot: "bg-cyan-500",
   },
+  Kotlin: {
+    bg: "bg-purple-500/10 dark:bg-purple-400/10",
+    text: "text-purple-700 dark:text-purple-300",
+    dot: "bg-purple-500",
+  },
+  Java: {
+    bg: "bg-rose-500/10 dark:bg-rose-400/10",
+    text: "text-rose-700 dark:text-rose-300",
+    dot: "bg-rose-500",
+  },
+  Android: {
+    bg: "bg-emerald-500/10 dark:bg-emerald-400/10",
+    text: "text-emerald-700 dark:text-emerald-300",
+    dot: "bg-emerald-500",
+  },
 };
 
 export default function ProjectsSection({
   initialProjects = projectsData as Project[],
   title = "Featured Projects",
-  subtitle = "A curated collection of my software engineering, machine learning, and data analytics work sourced directly from GitHub.",
+  subtitle = "A curated collection of my software engineering, web applications, and mobile projects sourced directly from GitHub.",
 }: ProjectsSectionProps) {
   const [activeFilter, setActiveFilter] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -51,8 +66,8 @@ export default function ProjectsSection({
   const categories = [
     { id: "all", label: "All Projects" },
     { id: "featured", label: "Featured" },
-    { id: "python", label: "Python & ML" },
     { id: "web", label: "Web Systems" },
+    { id: "mobile", label: "Mobile Apps" },
   ];
 
   const filteredProjects = useMemo(() => {
@@ -68,18 +83,20 @@ export default function ProjectsSection({
       if (activeFilter === "featured") {
         return project.featured;
       }
-      if (activeFilter === "python") {
-        return (
-          project.primary_language.toLowerCase().includes("python") ||
-          project.primary_language.toLowerCase().includes("jupyter") ||
-          project.topics.some((t) => t.includes("machine-learning") || t.includes("clustering"))
-        );
-      }
       if (activeFilter === "web") {
         return (
           project.primary_language.toLowerCase().includes("php") ||
+          project.primary_language.toLowerCase().includes("typescript") ||
           project.primary_language.toLowerCase().includes("javascript") ||
-          project.topics.some((t) => t.includes("pos") || t.includes("web"))
+          project.topics.some((t) => t.includes("pos") || t.includes("web") || t.includes("react") || t.includes("nextjs"))
+        );
+      }
+      if (activeFilter === "mobile") {
+        return (
+          project.primary_language.toLowerCase().includes("kotlin") ||
+          project.primary_language.toLowerCase().includes("java") ||
+          project.primary_language.toLowerCase().includes("android") ||
+          project.topics.some((t) => t.includes("android") || t.includes("mobile"))
         );
       }
 
@@ -187,8 +204,8 @@ export default function ProjectsSection({
                 key={project.id}
                 className="group relative flex flex-col justify-between rounded-2xl border border-zinc-200/80 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 backdrop-blur-sm overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-xl hover:border-zinc-300 dark:hover:border-zinc-700 hover:-translate-y-1 transition-all duration-300"
               >
-                {/* Project Image */}
-                {project.image_url ? (
+                {/* Project Image (rendered if provided) */}
+                {project.image_url && (
                   <div className="relative w-full aspect-video overflow-hidden bg-zinc-800">
                     <Image
                       src={project.image_url}
@@ -199,8 +216,6 @@ export default function ProjectsSection({
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/40 via-transparent to-transparent" />
                   </div>
-                ) : (
-                  <div className="w-full aspect-video bg-gradient-to-br from-zinc-800 to-zinc-900" />
                 )}
 
                 <div className="p-6">
