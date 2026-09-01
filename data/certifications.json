@@ -1,48 +1,16 @@
 [
   {
     "id": 1,
-    "title": "Lorem Ipsum Certification",
-    "issuer": "Acme Institute of Technology",
-    "description": "Dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "image_url": "https://picsum.photos/seed/cert1/600/400",
-    "credential_url": "#"
+    "title": "Junior Cybersecurity Analyst Career Path",
+    "issuer": "Cisco",
+    "description": "Verified completion of the Junior Cybersecurity Analyst Career Path with Cisco Networking Academy. Proficient in network monitoring and protection, firewalls, cloud security, cryptography, vulnerability assessments, risk management, forensic investigations, and incident response planning.",
+    "image_url": "/images/CyberSec.png"
   },
   {
     "id": 2,
-    "title": "Ipsum Data Analytics Certificate",
-    "issuer": "Global Analytics Academy",
-    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "image_url": "https://picsum.photos/seed/cert2/600/400",
-    "credential_url": "#"
-  },
-  {
-    "id": 3,
-    "title": "Amet Web Development Diploma",
-    "issuer": "Placeholder University",
-    "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    "image_url": "https://picsum.photos/seed/cert3/600/400",
-    "credential_url": "#"
-  },
-  {
-    "id": 4,
-    "title": "Consectetur Cloud Architecture",
-    "issuer": "Lorem Cloud Services",
-    "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "image_url": "https://picsum.photos/seed/cert4/600/400"
-  },
-  {
-    "id": 5,
-    "title": "Adipiscing ML Engineering",
-    "issuer": "Ipsum AI Institute",
-    "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam.",
-    "image_url": "https://picsum.photos/seed/cert5/600/400",
-    "credential_url": "#"
-  },
-  {
-    "id": 6,
-    "title": "Elit Cybersecurity Fundamentals",
-    "issuer": "Dolor Security Corp",
-    "description": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni.",
-    "image_url": "https://picsum.photos/seed/cert6/600/400"
+    "title": "Associate Data Analyst",
+    "issuer": "DataCamp",
+    "description": "Certified proficiency in data analysis fundamentals, data manipulation, cleaning, and visualization.",
+    "image_url": "/images/DataAnalyst.jpg"
   }
 ]

@@ -22,26 +22,25 @@ export default function CertificationsSection({
           Certifications
         </h2>
         <p className="mt-3 max-w-2xl text-base sm:text-lg text-zinc-400">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Professional
-          certifications and credentials earned along the way.
+          Professional certifications and credentials earned along the way.
         </p>
       </div>
 
       {/* Certifications Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
         {certifications.map((cert, index) => (
           <div
             key={cert.id}
             className={`group relative flex flex-col rounded-2xl border border-zinc-800/60 bg-zinc-900/40 backdrop-blur-sm overflow-hidden hover:border-zinc-700 hover:shadow-[0_0_40px_rgba(99,102,241,0.06)] hover:-translate-y-1 transition-all duration-300 animate-fade-in-up stagger-${Math.min(index + 1, 6)}`}
           >
             {/* Certificate Image */}
-            <div className="relative w-full aspect-[3/2] overflow-hidden bg-zinc-800">
+            <div className="relative w-full aspect-[16/10] overflow-hidden bg-zinc-800">
               <Image
                 src={cert.image_url}
                 alt={cert.title}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               {/* Overlay gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/60 via-transparent to-transparent" />
@@ -58,7 +57,7 @@ export default function CertificationsSection({
                 {cert.title}
               </h3>
 
-              <p className="mt-2 text-sm text-zinc-400 leading-relaxed line-clamp-3 flex-1">
+              <p className="mt-2 text-sm text-zinc-400 leading-relaxed flex-1">
                 {cert.description}
               </p>
 

@@ -29,20 +29,20 @@ const CONTACT_LINKS: ContactLink[] = [
   {
     icon: <Phone className="h-5 w-5" />,
     label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    value: "+63 977 116 6073",
+    href: "tel:+639771166073",
   },
   {
     icon: <Mail className="h-5 w-5" />,
     label: "Email",
-    value: "lorem@ipsum.dev",
-    href: "mailto:lorem@ipsum.dev",
+    value: "nilbenedictalvarez@gmail.com",
+    href: "mailto:nilbenedictalvarez@gmail.com",
   },
   {
     icon: <LinkedInIcon className="h-5 w-5" />,
     label: "LinkedIn",
-    value: "linkedin.com/in/placeholder",
-    href: "https://linkedin.com/in/placeholder",
+    value: "Nil Benedict Alvarez",
+    href: "https://www.linkedin.com/in/nil-benedict-alvarez-9477803a8/",
   },
 ];
 
@@ -62,8 +62,7 @@ export default function ContactFooter() {
               Contact Me
             </h2>
             <p className="mt-3 max-w-xl mx-auto text-base text-zinc-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feel free
-              to reach out through any of the channels below.
+              Feel free to reach out through any of the channels below.
             </p>
           </div>
 
@@ -83,7 +82,7 @@ export default function ContactFooter() {
                 <span className="text-xs font-semibold uppercase tracking-wider text-zinc-500 mb-1">
                   {link.label}
                 </span>
-                <span className="text-sm font-medium text-zinc-300 group-hover:text-zinc-100 transition-colors">
+                <span className="text-sm font-medium text-zinc-300 group-hover:text-zinc-100 transition-colors break-all sm:break-normal">
                   {link.value}
                 </span>
               </a>
