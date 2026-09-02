@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 interface NavLink {
@@ -81,9 +82,16 @@ export default function Navbar() {
           onClick={(e) => handleNavClick(e, "about")}
           className="flex items-center gap-3 group"
         >
-          <span className="h-9 w-9 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 text-white font-bold flex items-center justify-center text-sm shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/40 transition-shadow">
-            NA
-          </span>
+          <div className="relative h-9 w-9 rounded-full overflow-hidden ring-2 ring-blue-500/40 group-hover:ring-blue-500/80 transition-all shadow-md shadow-blue-500/20">
+            <Image
+              src="/images/profile.png"
+              alt="Profile Picture"
+              width={36}
+              height={36}
+              className="h-full w-full object-cover rounded-full"
+              priority
+            />
+          </div>
           <span className="font-semibold tracking-tight text-sm sm:text-base text-zinc-100">
             Nil Benedict Alvarez
           </span>

@@ -1,4 +1,4 @@
-import { Download } from "lucide-react";
+import { FileText } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -38,11 +38,13 @@ export default function HeroSection() {
         {/* CTA Button */}
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="#"
+            href="/documents/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-sm shadow-lg shadow-blue-600/25 hover:shadow-blue-600/40 hover:brightness-110 transition-all duration-300 group"
           >
-            <Download className="h-4.5 w-4.5 group-hover:-translate-y-0.5 transition-transform" />
-            Download Resume
+            <FileText className="h-4.5 w-4.5 group-hover:-translate-y-0.5 transition-transform" />
+            View Resume
           </a>
           <a
             href="#projects"
