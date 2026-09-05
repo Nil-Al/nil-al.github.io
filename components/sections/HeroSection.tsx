@@ -4,28 +4,21 @@ export default function HeroSection() {
   return (
     <section
       id="about"
-      className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden pt-16"
+      className="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden pt-20 pb-16"
     >
-      {/* Animated gradient orbs */}
+      {/* Subtle minimalist grid and single low-opacity radial accent */}
       <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-blue-600/20 rounded-full blur-[120px] animate-pulse-slow" />
-        <div className="absolute bottom-1/4 right-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-purple-600/20 rounded-full blur-[120px] animate-pulse-slow [animation-delay:3s]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 sm:w-80 sm:h-80 bg-indigo-500/10 rounded-full blur-[100px] animate-pulse-slow [animation-delay:1.5s]" />
+        <div className="absolute inset-0 bg-[radial-gradient(#27272a_1px,transparent_1px)] [background-size:24px_24px] opacity-25" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-emerald-500/[0.04] rounded-full blur-[100px]" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in-up">
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-zinc-800/60 text-zinc-300 border border-zinc-700/50 backdrop-blur-sm mb-8">
-          <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
-          Available for opportunities
-        </div>
-
         {/* Headline */}
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-zinc-50 leading-[1.1]">
+        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-zinc-50 leading-[1.12]">
           Building Smart, Responsive
           <br className="hidden sm:inline" />
-          <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
+          <span className="text-emerald-400 sm:ml-3">
             Digital Solutions.
           </span>
         </h1>
@@ -35,20 +28,20 @@ export default function HeroSection() {
           I am a versatile software developer specializing in full-stack web development and robust database architecture. Driven by a continuous learning mindset, I thrive on exploring emerging technologies—from engineering seamless, data-driven web applications to designing interactive game experiences.
         </p>
 
-        {/* CTA Button */}
+        {/* CTA Buttons */}
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="/documents/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-sm shadow-lg shadow-blue-600/25 hover:shadow-blue-600/40 hover:brightness-110 transition-all duration-300 group"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-emerald-500 text-zinc-950 font-semibold text-sm hover:bg-emerald-400 shadow-[0_0_24px_rgba(16,185,129,0.22)] hover:shadow-[0_0_32px_rgba(16,185,129,0.35)] transition-all duration-200 group"
           >
             <FileText className="h-4.5 w-4.5 group-hover:-translate-y-0.5 transition-transform" />
             View Resume
           </a>
           <a
             href="#projects"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border border-zinc-700 text-zinc-300 font-semibold text-sm hover:bg-zinc-800/50 hover:border-zinc-600 hover:text-zinc-100 transition-all duration-300"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl border border-zinc-800 bg-zinc-900/50 text-zinc-300 font-semibold text-sm hover:bg-zinc-800 hover:border-zinc-700 hover:text-zinc-100 transition-all duration-200"
           >
             View Projects
           </a>
@@ -56,7 +49,7 @@ export default function HeroSection() {
       </div>
 
       {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-zinc-950 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-zinc-950 to-transparent pointer-events-none" />
     </section>
   );
 }

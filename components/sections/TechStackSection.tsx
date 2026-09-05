@@ -63,8 +63,8 @@ interface TechPillProps {
 
 function TechPill({ item }: TechPillProps) {
   return (
-    <div className="flex-shrink-0 flex items-center gap-3 px-5 py-3 mx-3 rounded-2xl border border-zinc-800/60 bg-zinc-900/50 backdrop-blur-sm hover:border-zinc-700 hover:bg-zinc-800/40 transition-all duration-300 group">
-      <span className="text-zinc-400 group-hover:text-blue-400 transition-colors">
+    <div className="flex-shrink-0 flex items-center gap-3 px-5 py-3 mx-3 rounded-2xl border border-zinc-800/80 bg-zinc-900/40 backdrop-blur-sm hover:border-emerald-500/30 hover:bg-zinc-900/70 transition-all duration-300 group">
+      <span className="text-zinc-400 group-hover:text-emerald-400 transition-colors">
         {TECH_ICONS[item.icon] ?? <Code2 className="h-5 w-5" />}
       </span>
       <div className="flex flex-col">
@@ -85,19 +85,14 @@ export default function TechStackSection() {
   const rowTwoItems = [...ROW_TWO, ...ROW_TWO];
 
   return (
-    <section id="tech-stack" className="w-full py-20 sm:py-28 overflow-hidden">
+    <section id="tech-stack" className="w-full py-16 sm:py-24 overflow-hidden">
       {/* Section Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-14">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-zinc-800/60 text-zinc-300 border border-zinc-700/50 mb-4">
-          <span className="h-2 w-2 rounded-full bg-blue-400 animate-pulse" />
-          Technologies
-        </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
         <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-50">
           Tech Stack
         </h2>
         <p className="mt-3 max-w-2xl mx-auto text-base sm:text-lg text-zinc-400">
-          These are the
-          technologies I have worked with.
+          Core technologies, frameworks, and developer tools I work with.
         </p>
       </div>
 

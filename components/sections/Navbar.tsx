@@ -60,7 +60,22 @@ export default function Navbar() {
       e.preventDefault();
       const el = document.getElementById(id);
       if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
+        const lenis = (
+          window as unknown as {
+            lenis?: {
+              scrollTo: (
+                target: HTMLElement,
+                options?: { offset?: number; duration?: number }
+              ) => void;
+            };
+          }
+        ).lenis;
+
+        if (lenis) {
+          lenis.scrollTo(el, { offset: -70, duration: 1.1 });
+        } else {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
       }
       setIsMobileMenuOpen(false);
     },
@@ -71,7 +86,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         hasScrolled
-          ? "bg-zinc-950/80 backdrop-blur-xl border-b border-zinc-800/60 shadow-[0_4px_30px_rgba(0,0,0,0.3)]"
+          ? "bg-zinc-950/85 backdrop-blur-xl border-b border-zinc-800/80 shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
           : "bg-transparent border-b border-transparent"
       }`}
     >
@@ -82,7 +97,7 @@ export default function Navbar() {
           onClick={(e) => handleNavClick(e, "about")}
           className="flex items-center gap-3 group"
         >
-          <div className="relative h-9 w-9 rounded-full overflow-hidden ring-2 ring-blue-500/40 group-hover:ring-blue-500/80 transition-all shadow-md shadow-blue-500/20">
+          <div className="relative h-9 w-9 rounded-full overflow-hidden ring-1 ring-zinc-700 group-hover:ring-emerald-400/80 transition-all shadow-sm">
             <Image
               src="/images/profile.png"
               alt="Profile Picture"
@@ -92,7 +107,7 @@ export default function Navbar() {
               priority
             />
           </div>
-          <span className="font-semibold tracking-tight text-sm sm:text-base text-zinc-100">
+          <span className="font-semibold tracking-tight text-sm sm:text-base text-zinc-100 group-hover:text-emerald-400 transition-colors">
             Nil Benedict Alvarez
           </span>
         </a>
@@ -108,13 +123,13 @@ export default function Navbar() {
                 onClick={(e) => handleNavClick(e, id)}
                 className={`relative px-3.5 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                   isActive
-                    ? "text-zinc-50 bg-zinc-800/60"
-                    : "text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/30"
+                    ? "text-emerald-400 bg-zinc-900 border border-zinc-800"
+                    : "text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900/60"
                 }`}
               >
                 {label}
                 {isActive && (
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-0.5 rounded-full bg-gradient-to-r from-blue-500 to-purple-500" />
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-0.5 rounded-full bg-emerald-400" />
                 )}
               </a>
             );
@@ -137,7 +152,7 @@ export default function Navbar() {
           isMobileMenuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className="px-4 pb-4 pt-2 space-y-1 bg-zinc-950/95 backdrop-blur-xl border-t border-zinc-800/40">
+        <nav className="px-4 pb-4 pt-2 space-y-1 bg-zinc-950/95 backdrop-blur-xl border-t border-zinc-800/80">
           {NAV_LINKS.map(({ id, label }) => {
             const isActive = activeSection === id;
             return (
@@ -147,8 +162,8 @@ export default function Navbar() {
                 onClick={(e) => handleNavClick(e, id)}
                 className={`block px-4 py-2.5 rounded-xl text-sm font-medium transition-all ${
                   isActive
-                    ? "text-zinc-50 bg-zinc-800/70"
-                    : "text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/40"
+                    ? "text-emerald-400 bg-zinc-900 border border-zinc-800"
+                    : "text-zinc-400 hover:text-zinc-200 hover:bg-zinc-900/50"
                 }`}
               >
                 {label}
