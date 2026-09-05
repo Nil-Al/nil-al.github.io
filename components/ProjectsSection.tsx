@@ -108,14 +108,10 @@ export default function ProjectsSection({
     <section id="projects" className="w-full py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* Header */}
       <div className="flex flex-col items-center text-center mb-12">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-zinc-100 text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200 mb-3 border border-zinc-200 dark:border-zinc-700/60 transition-colors">
-          <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          GitHub Showcase
-        </div>
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:leading-none">
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-50 sm:leading-none">
           {title}
         </h2>
-        <p className="mt-3 max-w-2xl text-base sm:text-lg text-zinc-600 dark:text-zinc-400">
+        <p className="mt-3 max-w-2xl text-base sm:text-lg text-zinc-400">
           {subtitle}
         </p>
       </div>
@@ -132,8 +128,8 @@ export default function ProjectsSection({
                 onClick={() => setActiveFilter(category.id)}
                 className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 cursor-pointer ${
                   isActive
-                    ? "bg-zinc-900 text-white shadow-sm dark:bg-zinc-100 dark:text-zinc-900"
-                    : "bg-zinc-100 text-zinc-600 hover:bg-zinc-200 dark:bg-zinc-800/80 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-zinc-200"
+                    ? "bg-emerald-500 text-zinc-950 font-semibold shadow-[0_0_15px_rgba(16,185,129,0.2)]"
+                    : "bg-zinc-900/60 text-zinc-400 border border-zinc-800/80 hover:bg-zinc-900 hover:border-zinc-700 hover:text-zinc-200"
                 }`}
               >
                 {category.label}
@@ -149,10 +145,10 @@ export default function ProjectsSection({
             placeholder="Search projects or tags..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full px-4 py-2 pl-9 rounded-xl text-sm bg-zinc-50 dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 text-zinc-900 dark:text-zinc-100 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-400 dark:focus:ring-zinc-600 transition-all"
+            className="w-full px-4 py-2 pl-9 rounded-xl text-sm bg-zinc-900/80 border border-zinc-800 text-zinc-100 placeholder-zinc-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/40 focus:border-emerald-500/60 transition-all"
           />
           <svg
-            className="absolute left-3 top-2.5 h-4 w-4 text-zinc-400"
+            className="absolute left-3 top-2.5 h-4 w-4 text-zinc-500"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -167,7 +163,7 @@ export default function ProjectsSection({
           {searchQuery && (
             <button
               onClick={() => setSearchQuery("")}
-              className="absolute right-3 top-2.5 text-xs text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200 cursor-pointer"
+              className="absolute right-3 top-2.5 text-xs text-zinc-400 hover:text-zinc-200 cursor-pointer"
             >
               Clear
             </button>
@@ -177,14 +173,14 @@ export default function ProjectsSection({
 
       {/* Projects Grid */}
       {filteredProjects.length === 0 ? (
-        <div className="flex flex-col items-center justify-center p-12 text-center rounded-2xl border border-dashed border-zinc-300 dark:border-zinc-800">
-          <p className="text-zinc-500 dark:text-zinc-400 font-medium">No projects matched your criteria.</p>
+        <div className="flex flex-col items-center justify-center p-12 text-center rounded-2xl border border-dashed border-zinc-800">
+          <p className="text-zinc-400 font-medium">No projects matched your criteria.</p>
           <button
             onClick={() => {
               setActiveFilter("all");
               setSearchQuery("");
             }}
-            className="mt-3 text-sm font-semibold text-zinc-900 dark:text-zinc-100 hover:underline cursor-pointer"
+            className="mt-3 text-sm font-semibold text-emerald-400 hover:underline cursor-pointer"
           >
             Reset filters
           </button>
@@ -194,15 +190,15 @@ export default function ProjectsSection({
           {filteredProjects.map((project) => {
             const langStyle =
               LANGUAGE_COLORS[project.primary_language] || {
-                bg: "bg-zinc-100 dark:bg-zinc-800",
-                text: "text-zinc-700 dark:text-zinc-300",
+                bg: "bg-zinc-800",
+                text: "text-zinc-300",
                 dot: "bg-zinc-400",
               };
 
             return (
               <div
                 key={project.id}
-                className="group relative flex flex-col justify-between rounded-2xl border border-zinc-200/80 dark:border-zinc-800 bg-white/70 dark:bg-zinc-900/60 backdrop-blur-sm overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.04)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.2)] hover:shadow-xl hover:border-zinc-300 dark:hover:border-zinc-700 hover:-translate-y-1 transition-all duration-300"
+                className="group relative flex flex-col justify-between rounded-2xl border border-zinc-800/80 bg-zinc-900/50 backdrop-blur-sm overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.3)] hover:shadow-2xl hover:border-emerald-500/40 hover:-translate-y-1 transition-all duration-300"
               >
                 {/* Project Image (rendered if provided) */}
                 {project.image_url && (
@@ -214,7 +210,7 @@ export default function ProjectsSection({
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/40 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/60 via-transparent to-transparent" />
                   </div>
                 )}
 
@@ -228,7 +224,7 @@ export default function ProjectsSection({
                       {project.primary_language}
                     </span>
 
-                    <div className="flex items-center gap-3 text-xs text-zinc-500 dark:text-zinc-400">
+                    <div className="flex items-center gap-3 text-xs text-zinc-400">
                       {project.stargazers_count > 0 && (
                         <span className="flex items-center gap-1">
                           <svg
@@ -258,7 +254,7 @@ export default function ProjectsSection({
                         </span>
                       )}
                       {project.featured && (
-                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20">
+                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">
                           Featured
                         </span>
                       )}
@@ -266,12 +262,12 @@ export default function ProjectsSection({
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-1">
+                  <h3 className="text-lg font-bold text-zinc-100 group-hover:text-emerald-400 transition-colors line-clamp-1">
                     {project.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="mt-2.5 text-sm text-zinc-600 dark:text-zinc-400 line-clamp-3 leading-relaxed">
+                  <p className="mt-2.5 text-sm text-zinc-400 line-clamp-3 leading-relaxed">
                     {project.description}
                   </p>
 
@@ -280,27 +276,27 @@ export default function ProjectsSection({
                     {project.topics.slice(0, 4).map((topic) => (
                       <span
                         key={topic}
-                        className="px-2 py-0.5 rounded-md text-[11px] font-medium bg-zinc-100 dark:bg-zinc-800/60 text-zinc-600 dark:text-zinc-400 border border-zinc-200/50 dark:border-zinc-700/50"
+                        className="px-2 py-0.5 rounded-md text-[11px] font-medium bg-zinc-800/80 text-zinc-300 border border-zinc-700/50"
                       >
                         #{topic}
                       </span>
                     ))}
                     {project.topics.length > 4 && (
-                      <span className="px-1.5 py-0.5 rounded-md text-[11px] font-medium text-zinc-400 dark:text-zinc-500">
+                      <span className="px-1.5 py-0.5 rounded-md text-[11px] font-medium text-zinc-500">
                         +{project.topics.length - 4}
                       </span>
                     )}
                   </div>
-                </div> {/* end of p-6 wrapper */}
+                </div>
 
                 {/* Footer Links */}
-                <div className="px-6 pb-5 pt-0 border-t border-zinc-100 dark:border-zinc-800/80 mt-auto">
+                <div className="px-6 pb-5 pt-0 border-t border-zinc-800/80 mt-auto">
                   <div className="flex items-center justify-between pt-4">
                     <a
                       href={project.html_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-semibold bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-all group/link"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-semibold bg-zinc-800/80 border border-zinc-700/60 text-zinc-300 hover:bg-zinc-800 hover:text-white hover:border-zinc-600 transition-all group/link"
                     >
                       <svg
                         className="h-3.5 w-3.5"
@@ -322,7 +318,7 @@ export default function ProjectsSection({
                         href={project.live_url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:brightness-110 shadow-sm hover:shadow-blue-600/25 transition-all"
+                        className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-semibold bg-emerald-500 text-zinc-950 hover:bg-emerald-400 shadow-[0_0_15px_rgba(16,185,129,0.2)] hover:shadow-[0_0_20px_rgba(16,185,129,0.35)] transition-all"
                       >
                         <ExternalLink className="h-3.5 w-3.5" />
                         Live Site
